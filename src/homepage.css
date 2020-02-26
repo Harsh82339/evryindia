@@ -1,0 +1,16 @@
+
+input.mr-sm-2.form-control{
+    margin-left:450px;
+    width: 250px;
+}
+
+th{
+    border:0px;
+    background-color:#e0e0e0;
+    ;
+}
+select{
+    width: 120px;
+    height: 36px;
+    border-radius: 8px;;
+}
