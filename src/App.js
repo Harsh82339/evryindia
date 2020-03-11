@@ -2,7 +2,7 @@ import React from 'react';
 import { Route } from 'react-router-dom';
 import loginpage from './loginpage';
 import home from './homepage';
-import { withAuthenticator } from 'aws-amplify-react'
+// import { withAuthenticator } from 'aws-amplify-react'
 
 
 const App = () => <div>
@@ -12,4 +12,4 @@ const App = () => <div>
 </div>;
 
 
-export default withAuthenticator(App, {includeGreetings:true } );
+export default App;
