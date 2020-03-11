@@ -1,0 +1,15 @@
+{
+	"auth": {
+		"myapp548b97a7": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation",
+			"dependsOn": []
+		}
+	},
+	"storage": {
+		"egghead": {
+			"service": "S3",
+			"providerPlugin": "awscloudformation"
+		}
+	}
+}

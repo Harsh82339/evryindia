@@ -1,19 +1,28 @@
 import React from 'react';
 import { Navbar, Form, FormControl, } from 'react-bootstrap';
 import { Table } from 'reactstrap';
-import print from "./data.json"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './homepage.css'
+import axios from 'axios';
 
 class homepage extends React.Component {
-  constructor(props) {
+
+constructor(props) {
     super(props)
     this.state = {
-      print,
+      print:[],
       filtered: "",
       selectValue: "",
       filteredData: "",
     }
+  }
+ 
+  componentDidMount(){
+
+  axios.get('https://eggheadmyapp-myapp.s3.us-east-2.amazonaws.com/data.json') 
+    .then(res => {
+        this.setState({ print: res.data });  
+   });
   }
   handleInputChange = (event) => {
     this.setState({ filtered: event.target.value });
@@ -52,12 +61,11 @@ class homepage extends React.Component {
     });
     return (
       <div className="App">
-        <div>
+          <div>
           <Navbar bg="dark" variant="dark">
             <Form inline>
               <div className="search">
                 <FormControl type="text" placeholder="Search" className="mr-sm-2" onChange={this.handleInputChange} />
-                {/* <Button variant="outline-info" >Search</Button> */}
               </div>
               <select
                 value={this.state.selectValue}
@@ -98,7 +106,9 @@ class homepage extends React.Component {
               </tr>
             )}
           </tbody>
-        </Table>
+        </Table> 
+        
+            
       </div>
     )
 
@@ -106,3 +116,8 @@ class homepage extends React.Component {
 }
 
 export default homepage;
+
+
+
+
+
