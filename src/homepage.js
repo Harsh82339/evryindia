@@ -10,7 +10,7 @@ class homepage extends React.Component {
 constructor(props) {
     super(props)
     this.state = {
-      print:[],
+      printa:[],
       filtered: "",
       selectValue: "",
       filteredData: "",
@@ -21,7 +21,7 @@ constructor(props) {
 
   axios.get('https://eggheadmyapp-myapp.s3.us-east-2.amazonaws.com/data.json') 
     .then(res => {
-        this.setState({ print: res.data });  
+        this.setState({ printa: res.data });  
    });
   }
   handleInputChange = (event) => {
@@ -32,7 +32,7 @@ constructor(props) {
     this.setState({ selectValue: e.target.value });
   }
   render() {
-    const filteredData = this.state.print.filter(val => {
+    const filteredData = this.state.printa.filter(val => {
       if (this.state.selectValue === "Franchisce") {
         if (this.state.filtered.length) {
           const lowerCaseValue = val["Franchisce"].toLowerCase()
