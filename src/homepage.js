@@ -19,7 +19,7 @@ constructor(props) {
  
   componentDidMount(){
 
-  axios.get('https://eggheadmyapp-myapp.s3.us-east-2.amazonaws.com/data.json') 
+  axios.get('https://eggheadmyapp-myapp.s3.us-east-2.amazonaws.com/data1.json') 
     .then(res => {
         this.setState({ printa: res.data });  
    });
