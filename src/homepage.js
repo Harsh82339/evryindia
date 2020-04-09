@@ -64,18 +64,18 @@ constructor(props) {
           <div>
           <Navbar bg="dark" variant="dark">
             <Form inline>
-              <div className="search">
-                <FormControl type="text" placeholder="Search" className="mr-sm-2" onChange={this.handleInputChange} />
-              </div>
+//               <div className="search">
+//                 <FormControl type="text" placeholder="Search" className="mr-sm-2" onChange={this.handleInputChange} />
+//               </div>
               <select
                 value={this.state.selectValue}
                 onChange={this.handleChange}
               >
                 <option value="Select">Select</option>
-                <option value="Franchisce">Franchisce</option>
-                <option value="Brand">Brand</option>
-                <option value="division">Division</option>
-                <option value="Forecastdata">Forecastdata</option>
+                <option value="Franchisce">File1</option>
+                <option value="Brand">File2</option>
+                <option value="division">File3</option>
+                <option value="Forecastdata">File3</option>
 
               </select>
              </Form>
